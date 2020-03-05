@@ -17,12 +17,12 @@
     <ClCompile Include="Queues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Implementations\geogeo1.cpp">
+    <ClCompile Include="Implementations\problem1.cpp">
       <Filter>Source Files\Implementations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Implementations\geogeo1.h">
+    <ClInclude Include="Implementations\problem1.h">
       <Filter>Source Files\Implementations</Filter>
     </ClInclude>
   </ItemGroup>
