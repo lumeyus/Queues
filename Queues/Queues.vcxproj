@@ -152,7 +152,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Implementations\geogeo1.cpp" />
     <ClCompile Include="Queues.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Implementations\geogeo1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
