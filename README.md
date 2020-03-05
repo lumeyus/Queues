@@ -9,11 +9,10 @@ Implement the following queues:
 
 
 and compare their mean delay performance under First-Come-First-Serve (FCFS) and Round-Robin (RR) policies.
-
 Plot their mean delay against 𝜆 ∈ (0, 0.5) when service rate is 𝜇 = 0.5 (for both FCFS and RR policies).
 
 # Problem 2:
-Implement the follow queues:
+Implement the following queues:
 1. Geo/Geo/k/k  : arrival is Bernoulli with mean 𝜆 and file size follows from geometric distribution with mean 1/𝜇
 2. Geo/D/k/k    : arrival follows Bernoulli distribution with mean 𝜆, and file size is always equal to 1/𝜇
 3. Geo/X/k/k    : arrival follows Bernoulli distribution with mean 𝜆, and the file size is equal to M with probability (1/𝜇 - 1)/(M - 1), and 1 otherwise (Take M = 5 for simulation)
