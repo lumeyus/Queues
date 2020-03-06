@@ -23,10 +23,16 @@
     <ClCompile Include="Implementations\Solution.cpp">
       <Filter>Source Files\Implementations</Filter>
     </ClCompile>
+    <ClCompile Include="Data Structures\DLL.cpp">
+      <Filter>Source Files\Data Structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Implementations\Solution.h">
       <Filter>Source Files\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\DLL.h">
+      <Filter>Source Files\Data Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

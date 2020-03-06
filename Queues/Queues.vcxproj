@@ -152,10 +152,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Data Structures\DLL.cpp" />
     <ClCompile Include="Implementations\Solution.cpp" />
     <ClCompile Include="Queues.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data Structures\DLL.h" />
     <ClInclude Include="Implementations\Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

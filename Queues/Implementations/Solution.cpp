@@ -1,14 +1,14 @@
 /* 
 	Solution.cpp - Luis Ibanez - 3/6/2020
 	-------------------------------------
-	Implementation file for Solution.h class methods and helper function.
+	Implementation file for Solution.h helper function
 */
 
 #include "Solution.h"
 
 double Seed = 7;
 
-// random function
+// used to generate random double value
 double myrand()
 {
 	double p;
@@ -18,6 +18,7 @@ double myrand()
 	return p;
 }
 
+// run desired queueing simulation, problem 1
 void RunProblemOne(int queue_type)
 {
 	// get file information
@@ -109,6 +110,7 @@ void RunProblemOne(int queue_type)
 	return;
 }
 
+// run desired queueing simulation, problem 2
 void RunProblemTwo(int queue_type)
 {
 	// get file information
@@ -120,18 +122,21 @@ void RunProblemTwo(int queue_type)
 	std::cout << "NumOfServers \tAvgDropRate" << std::endl;
 	ofile << "NumOfServers \tAvgDropRate" << std::endl;
 
-	// initialize / declare
-	double NumofServers[NUM_SIM_POINTS_P2] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	double Lambda = 0.8;  // arrival rate
-	double mu = 2;    // mean file size 
-	double AvgDropRate[NUM_SIM_POINTS_P2] = { 0, 0, 0, 0, 0 };
+	// initialize
 	int ServerStatus[10];
 	int NewStatus[10];
-	int busy = 1;
+	int busy;
 	double TotalNumofSentPkts; // total number of packets issued
 	double TotalNumofDropPkts; // total number of packets dropped
 	int sz; // file size
 	double xBernoulli;
+
+	// define
+	double NumofServers[NUM_SIM_POINTS_P2] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	double Lambda = 0.8;  // arrival rate
+	double mu = 2;    // mean file size 
+	double AvgDropRate[NUM_SIM_POINTS_P2] = { 0, 0, 0, 0, 0 };
+	
 
 	for (int i = 0; i < NUM_SIM_POINTS_P2; i++)	// num of arrival intensity
 	{
@@ -213,6 +218,7 @@ void RunProblemTwo(int queue_type)
 	return;
 }
 
+// gets output filename from user
 std::string* GetFileName()
 {
 	std::string file_name;
@@ -220,75 +226,3 @@ std::string* GetFileName()
 	std::cin >> file_name;
 	return new std::string(file_name);
 }
-
-// default constructor
-DLinkedList::DLinkedList() {    
-	header = new DNode;               // create sentinels
-	trailer = new DNode;
-	header->next = trailer;           // have them point to each other
-	trailer->prev = header;
-}
-
-// destructor
-DLinkedList::~DLinkedList() {           
-	while (!empty()) removeFront();     // remove all but sentinels
-	delete header;                      // remove the sentinels
-	delete trailer;
-}
-
-// checks DLL empty status
-bool DLinkedList::empty() const        
-{
-	return (header->next == trailer);
-}
-
-// get front element
-const ArrivalTime& DLinkedList::front() const    
-{
-	return header->next->aTime;
-}
-
-// append to DLL
-void DLinkedList::addFront(const ArrivalTime& arrival, const FileSize& size)
-{
-	add(header->next, arrival, size);
-}
-
-// prepend to DLL
-void DLinkedList::addBack(const ArrivalTime& arrival, const FileSize& size)
-{
-	add(trailer, arrival, size);
-}
-
-// pop DLL
-void DLinkedList::removeFront()
-{
-	remove(header->next);
-}
-
-// remove last element of DLL
-void DLinkedList::removeBack()
-{
-	remove(trailer->prev);
-}
-
-// inserts new node before v in DLL
-void DLinkedList::add(DNode* v, const ArrivalTime& arrival, const FileSize& size) {
-	DNode* u = new DNode;       // create a new node and assign members
-	u->aTime = arrival;
-	u->fSize = size;
-	u->next = v;		// place u in between v
-	u->prev = v->prev;	// and v->prev
-	v->prev->next = u;
-	v->prev = u;
-}
-
-// remove node v from DLL
-void DLinkedList::remove(DNode* v) {     // remove node v
-	DNode* u = v->prev;                  // predecessor
-	DNode* w = v->next;                  // successor
-	u->next = w;                         // unlink v from list
-	w->prev = u;
-	delete v;
-}
-
