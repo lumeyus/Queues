@@ -1,5 +1,6 @@
-# Queue Simulations (ELE 408 - Embedded System Design Homework 3)
-Implementing simulations for different queue types and evaluating their performance using C.
+# Queue Simulations (ELE 408 - Embedded System Design)
+Implementing simulations for different queue types and evaluating their performance using C/C++.
+*(omitting plots from this repository, they're just simple excel graphs plotting the available output results)*
 
 # Problem 1:
 Implement the following queues:
