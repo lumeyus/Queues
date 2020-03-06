@@ -152,11 +152,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Implementations\problem1.cpp" />
+    <ClCompile Include="Implementations\Solution.cpp" />
     <ClCompile Include="Queues.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Implementations\problem1.h" />
+    <ClInclude Include="Implementations\Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

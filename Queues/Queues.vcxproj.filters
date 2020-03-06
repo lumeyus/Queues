@@ -12,17 +12,20 @@
     <Filter Include="Source Files\Implementations">
       <UniqueIdentifier>{dfc0646a-c9dc-4431-bcdb-c62c7f8ec558}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Data Structures">
+      <UniqueIdentifier>{3c671016-1161-4506-8580-946de388a3f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queues.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Implementations\problem1.cpp">
+    <ClCompile Include="Implementations\Solution.cpp">
       <Filter>Source Files\Implementations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Implementations\problem1.h">
+    <ClInclude Include="Implementations\Solution.h">
       <Filter>Source Files\Implementations</Filter>
     </ClInclude>
   </ItemGroup>

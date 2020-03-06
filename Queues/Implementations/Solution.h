@@ -1,5 +1,5 @@
 /*
-	problem1.h - Luis Ibanez - 3/6/2020
+	Solution.h - Luis Ibanez - 3/6/2020
 	-----------------------------------
 	Contains the Double Linked List and respective Node class declarations.
 	Also contains declaration of the myrand() function to produce a random value for
@@ -13,17 +13,11 @@
 #include <iomanip>
 #include <math.h>
 #include <time.h>
+#include "../Data Structures/DLL.h"
 
-// define queue types
-enum queues
-{
-	geogeo1,
-	geoD1,
-	geoX1,
-};
-
-#define NUM_SIM_POINTS 12
-#define SIM_TIME 1e8
+#define NUM_SIM_POINTS_P1 12
+#define NUM_SIM_POINTS_P2 10
+#define SIM_TIME 1e5
 #define M 5
 
 typedef double ArrivalTime;        // arrival time
@@ -82,4 +76,9 @@ protected:
 double myrand();
 
 // run the desired queueing simulation, problem 1
-void runProblem1(int queue_type);
+void RunProblemOne(int queue_type);
+
+// run the desired queueing simulation, problem 2
+void RunProblemTwo(int queue_type);
+
+std::string* GetFileName();
